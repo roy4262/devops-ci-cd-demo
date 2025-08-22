@@ -11,19 +11,39 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+<<<<<<< HEAD
       - name: Checkout code
         uses: actions/checkout@v2
 
+=======
+      # Checkout code
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Setup Node.js
+>>>>>>> 0dc0784453bef05830b351eee9d8add672661470
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
           node-version: '16'
 
+<<<<<<< HEAD
       - name: Install dependencies
         run: npm install
 
       - name: Run tests
         run: npm test
 
+=======
+      # Install dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # Run tests
+      - name: Run tests
+        run: npm test
+
+      # Build Docker image
+>>>>>>> 0dc0784453bef05830b351eee9d8add672661470
       - name: Build Docker image
         run: docker build -t myapp:latest .
